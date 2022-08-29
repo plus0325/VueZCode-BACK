@@ -13,8 +13,8 @@ import {
   editCart,
   getCart,
   getAllUser,
-  getDelUser,
-  editAllUser
+  getDelUser
+  // editAllUser
 } from '../controllers/users.js'
 
 const router = express.Router()
