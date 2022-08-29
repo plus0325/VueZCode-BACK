@@ -30,7 +30,7 @@ router.get('/', auth.jwt, getUser)
 // ---------------------------------------------------------------------
 router.get('/all', auth.jwt, admin, getAllUser)
 router.delete('/:id', auth.jwt, admin, getDelUser)
-router.patch('/:id', auth.jwt, admin, editAllUser)
+// router.patch('/:id', auth.jwt, admin, editAllUser)
 // ---------------------------------------------------------------------
 // addCart 購物車 - 新增選購商品(加入購物車)
 // ---------------------------------------------------------------------

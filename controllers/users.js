@@ -181,7 +181,7 @@ export const getUser = async (req, res) => {
 }
 
 // ---------------------------------------------------------------------
-// getUser 取得使用者資料
+// getAllUser  取得所有使用者資料
 // [最後關卡]：router.get('/all', auth.jwt, admin, getAllUser)
 // ---------------------------------------------------------------------
 export const getAllUser = async (req, res) => {
