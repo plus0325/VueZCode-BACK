@@ -13,8 +13,8 @@ import {
   editCart,
   getCart,
   getAllUser,
-  getDelUser
-  // editAllUser
+  getDelUser,
+  editAllUser
 } from '../controllers/users.js'
 
 const router = express.Router()
@@ -25,12 +25,7 @@ router.post('/login', content('application/json'), auth.login, login)
 router.delete('/logout', auth.jwt, logout)
 router.post('/extend', auth.jwt, extend)
 router.get('/', auth.jwt, getUser)
-// ---------------------------------------------------------------------
-// getAllUser 取得全部會員資料(管理員)
-// ---------------------------------------------------------------------
-router.get('/all', auth.jwt, admin, getAllUser)
-router.delete('/:id', auth.jwt, admin, getDelUser)
-// router.patch('/:id', auth.jwt, admin, editAllUser)
+
 // ---------------------------------------------------------------------
 // addCart 購物車 - 新增選購商品(加入購物車)
 // ---------------------------------------------------------------------
@@ -45,6 +40,13 @@ router.patch('/cart', content('application/json'), auth.jwt, editCart)
 // getCart 購物車 - 取得選購商品(取購物車內容)
 // ---------------------------------------------------------------------
 router.get('/cart', auth.jwt, getCart)
+
+// ---------------------------------------------------------------------
+// getAllUser 取得全部會員資料(管理員)
+// ---------------------------------------------------------------------
+router.get('/all', auth.jwt, admin, getAllUser)
+router.delete('/:id', auth.jwt, admin, getDelUser)
+router.patch('/:id', auth.jwt, admin, editAllUser)
 
 export default router
 
