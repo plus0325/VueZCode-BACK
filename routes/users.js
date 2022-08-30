@@ -42,7 +42,7 @@ router.patch('/cart', content('application/json'), auth.jwt, editCart)
 router.get('/cart', auth.jwt, getCart)
 
 // ---------------------------------------------------------------------
-// getAllUser 取得全會員資料(管理員)
+// getAllUser 取得全部會員資料(管理員)
 // ---------------------------------------------------------------------
 router.get('/all', auth.jwt, admin, getAllUser)
 router.delete('/:id', auth.jwt, admin, getDelUser)
